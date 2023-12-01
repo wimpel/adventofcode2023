@@ -1,8 +1,3 @@
-# test <- "1abc2
-# pqr3stu8vwx
-# a1b2c3d4e5f
-# treb7uchet"
-
 library(stringi)
 library(stringr)
 library(magrittr)
@@ -11,6 +6,7 @@ input <- readLines("./data/day1.txt")
 #########
 # part 1
 #########
+#extract first and last digit, paste together, set to numeric and then sum
 sum(as.numeric(sapply(str_extract_all(input, pattern = "[0-9]"), function(x) paste0(x[1], x[length(x)]))))
 
 #########
