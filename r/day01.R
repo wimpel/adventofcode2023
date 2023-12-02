@@ -9,6 +9,7 @@ input <- readLines("./data/day1.txt")
 #extract first and last digit, paste together, set to numeric and then sum
 sum(as.numeric(sapply(str_extract_all(input, pattern = "[0-9]"), function(x) paste0(x[1], x[length(x)]))))
 
+
 #########
 # part 2
 #########
